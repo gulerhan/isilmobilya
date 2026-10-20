@@ -329,7 +329,10 @@ a:hover {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  flex-shrink: 0;
+  max-width: min(100%, 14.5rem);
+  padding: 0;
+  background: transparent;
   color: inherit;
   text-decoration: none;
 }
@@ -338,32 +341,13 @@ a:hover {
   color: inherit;
 }
 
-.logo__mark {
-  width: 0.8rem;
-  height: 0.8rem;
-  border: 1.5px solid currentColor;
-  transform: rotate(45deg);
-}
-
-.logo__word {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.logo__name {
-  font-family: var(--font-serif);
-  font-size: 1.4rem;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-}
-
-.logo__tag {
-  margin-top: 0.22rem;
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+.logo__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 2.6rem;
+  object-fit: contain;
+  background: transparent;
 }
 
 .nav-toggle {
@@ -453,16 +437,6 @@ a:hover {
 .js .header__inner {
   flex-wrap: nowrap;
   height: var(--header-height);
-}
-
-.js.at-top:not(.menu-open) .header {
-  color: var(--color-inverse);
-}
-
-.js.at-top:not(.menu-open) .header::before {
-  background: linear-gradient(to bottom, rgba(59, 49, 40, 0.58), rgba(59, 49, 40, 0));
-  box-shadow: none;
-  backdrop-filter: none;
 }
 
 .js .logo,
@@ -1191,6 +1165,14 @@ a:hover {
   :root {
     --space-section: 6.5rem;
     --carousel-gap: 1.25rem;
+  }
+
+  .logo {
+    max-width: 18rem;
+  }
+
+  .logo__image {
+    height: 2.9rem;
   }
 
   .container {
