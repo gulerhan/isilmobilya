@@ -355,6 +355,7 @@ a:hover {
   font-family: var(--font-serif);
   font-size: 1.4rem;
   letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 .logo__tag {
