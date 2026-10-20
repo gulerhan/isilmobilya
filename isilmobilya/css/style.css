@@ -12,7 +12,6 @@
   --color-text: #3b3128;
   --color-text-light: #7a6c5d;
   --color-inverse: #faf6ef;
-  --color-danger: #8e3b32;
   --color-header: rgba(250, 246, 239, 0.94);
   --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: Inter, "Segoe UI", sans-serif;
@@ -1017,86 +1016,21 @@ a:hover {
   gap: 2rem;
 }
 
-.contact__address {
-  font-style: normal;
-}
-
-.contact__form,
+.contact__address,
+.contact__map,
 .details,
 .map {
   min-width: 0;
 }
 
-.form__note,
-.form__success {
-  margin-bottom: 1rem;
-}
-
-.form__success {
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-sm);
-  background: rgba(200, 169, 126, 0.2);
-  scroll-margin-top: calc(var(--header-offset) + 1rem);
-}
-
-.form__row {
-  display: grid;
-  gap: 1rem;
-}
-
-.form__field {
-  margin-bottom: 1rem;
-}
-
-.form__label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.form__req {
-  color: var(--color-accent-deep);
-}
-
-.form__control {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  border: 1px solid rgba(92, 67, 40, 0.22);
-  border-radius: var(--radius-sm);
-  background: #fffdf9;
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-
-.form__control:focus-visible {
-  border-color: var(--color-accent-deep);
-  box-shadow: 0 0 0 3px rgba(200, 169, 126, 0.35);
-}
-
-.form__control[aria-invalid="true"] {
-  border-color: var(--color-danger);
-}
-
-textarea.form__control {
-  min-height: 9rem;
-  resize: vertical;
-}
-
-.form__error {
-  margin: 0.4rem 0 0;
-  color: var(--color-danger);
-  font-size: 0.875rem;
-}
-
-.form__submit {
-  width: 100%;
+.contact__address {
+  font-style: normal;
 }
 
 .details {
   display: grid;
   gap: 1rem;
-  margin: 0 0 1.25rem;
+  margin: 0;
   font-style: normal;
 }
 
@@ -1252,14 +1186,10 @@ textarea.form__control {
   .gallery__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .form__submit {
-    width: auto;
-  }
 }
 
 /* ==========================================================================
-   768px — masaüstü menü, iki kart, form satırı
+   768px — masaüstü menü, iki kart
    Görünür yorum sayısı JS ile aynı: 2
    ========================================================================== */
 
@@ -1311,10 +1241,6 @@ textarea.form__control {
     flex-basis: calc((100% - var(--carousel-gap)) / 2);
   }
 
-  .form__row {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .footer__inner {
     grid-template-columns: 1fr auto;
     align-items: end;
@@ -1352,7 +1278,7 @@ textarea.form__control {
   }
 
   .contact__layout {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 0.85fr 1.15fr;
     gap: 3rem;
     align-items: start;
   }

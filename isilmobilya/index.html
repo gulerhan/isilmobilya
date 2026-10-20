@@ -307,57 +307,30 @@
           <header class="section__header reveal">
             <p class="eyebrow eyebrow--dark">İletişim</p>
             <h2 id="iletisim-baslik">Atölyemize uğrayın</h2>
-            <p class="section__intro">Ölçü, kumaş veya teslimat için yazın. Form yalnızca tarayıcıda kontrol edilir.</p>
+            <p class="section__intro">Ölçü, kumaş veya teslimat için bize telefon, e-posta veya atölyeden ulaşın.</p>
           </header>
           <div class="contact__layout">
-            <form class="contact__form reveal" data-contact-form novalidate>
-              <p class="form__success" data-form-success role="status" tabindex="-1" hidden>Teşekkürler. Mesajınız alındı. Bu tanıtım sayfası mesajı bir sunucuya göndermez; bize telefon veya e-posta ile ulaşabilirsiniz.</p>
-              <p class="form__note"><span aria-hidden="true">*</span> işaretli alanlar zorunludur.</p>
-              <div class="form__row">
-                <div class="form__field">
-                  <label class="form__label" for="name">Ad soyad <span class="form__req" aria-hidden="true">*</span></label>
-                  <input class="form__control" id="name" name="name" type="text" autocomplete="name" required aria-required="true" maxlength="80" aria-describedby="name-error">
-                  <p class="form__error" id="name-error" hidden></p>
+            <address class="contact__address reveal">
+              <dl class="details">
+                <div class="details__item">
+                  <dt class="details__term">Adres</dt>
+                  <dd class="details__value">Modoko Mobilyacılar Sitesi, A Blok No: 42<br>Ümraniye / İstanbul</dd>
                 </div>
-                <div class="form__field">
-                  <label class="form__label" for="email">E-posta <span class="form__req" aria-hidden="true">*</span></label>
-                  <input class="form__control" id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-required="true" maxlength="120" spellcheck="false" aria-describedby="email-error">
-                  <p class="form__error" id="email-error" hidden></p>
+                <div class="details__item">
+                  <dt class="details__term">Telefon</dt>
+                  <dd class="details__value"><a href="tel:+902165550142">0216 555 01 42</a></dd>
                 </div>
-              </div>
-              <div class="form__field">
-                <label class="form__label" for="phone">Telefon <span class="form__req" aria-hidden="true">*</span></label>
-                <input class="form__control" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-required="true" maxlength="20" spellcheck="false" aria-describedby="phone-error">
-                <p class="form__error" id="phone-error" hidden></p>
-              </div>
-              <div class="form__field">
-                <label class="form__label" for="message">Mesaj <span class="form__req" aria-hidden="true">*</span></label>
-                <textarea class="form__control" id="message" name="message" required aria-required="true" maxlength="1000" aria-describedby="message-error"></textarea>
-                <p class="form__error" id="message-error" hidden></p>
-              </div>
-              <button class="btn btn--primary form__submit" type="submit">Mesajı Gönder</button>
-            </form>
-            <div class="contact__aside reveal" style="--reveal-delay: 0.12s">
-              <address class="contact__address">
-                <dl class="details">
-                  <div class="details__item">
-                    <dt class="details__term">Adres</dt>
-                    <dd class="details__value">Modoko Mobilyacılar Sitesi, A Blok No: 42<br>Ümraniye / İstanbul</dd>
-                  </div>
-                  <div class="details__item">
-                    <dt class="details__term">Telefon</dt>
-                    <dd class="details__value"><a href="tel:+902165550142">0216 555 01 42</a></dd>
-                  </div>
-                  <div class="details__item">
-                    <dt class="details__term">E-posta</dt>
-                    <dd class="details__value"><a href="mailto:info@isilmobilya.com">info@isilmobilya.com</a></dd>
-                  </div>
-                  <div class="details__item">
-                    <dt class="details__term">Çalışma saatleri</dt>
-                    <dd class="details__value">Pazartesi – Cumartesi, 09:00 – 19:00<br>Pazar, 11:00 – 17:00</dd>
-                  </div>
-                </dl>
-              </address>
+                <div class="details__item">
+                  <dt class="details__term">E-posta</dt>
+                  <dd class="details__value"><a href="mailto:info@isilmobilya.com">info@isilmobilya.com</a></dd>
+                </div>
+                <div class="details__item">
+                  <dt class="details__term">Çalışma saatleri</dt>
+                  <dd class="details__value">Pazartesi – Cumartesi, 09:00 – 19:00<br>Pazar, 11:00 – 17:00</dd>
+                </div>
+              </dl>
+            </address>
+            <div class="contact__map reveal" style="--reveal-delay: 0.12s">
               <div class="map">
                 <iframe
                   class="map__frame"
