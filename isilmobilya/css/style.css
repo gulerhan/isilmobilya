@@ -1,4 +1,4 @@
-/* ==========================================================================
+  /* ==========================================================================
    Değişkenler
    Belirtilen krem palet + küçük metin kontrastı için derin altın tonu
    ========================================================================== */
@@ -1083,6 +1083,24 @@ a:hover {
   max-width: 28rem;
 }
 
+.footer__nap {
+  max-width: 28rem;
+  margin: 0.85rem 0 0;
+  color: rgba(250, 246, 239, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
 .footer__copy {
   font-size: 0.875rem;
 }
@@ -1114,6 +1132,32 @@ a:hover {
   border-color: var(--color-accent);
   background: var(--color-accent);
   color: var(--color-text);
+}
+
+.error {
+  display: grid;
+  place-items: center;
+  min-height: calc(100svh - var(--header-offset));
+  padding: clamp(3rem, 8vh, 6rem) 0;
+  text-align: center;
+}
+
+.error__code {
+  margin: 0 0 0.35rem;
+  color: var(--color-accent-dark);
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
+  line-height: 1;
+}
+
+.error__title {
+  margin: 0 0 0.75rem;
+}
+
+.error__text {
+  max-width: 34rem;
+  margin: 0 auto 1.75rem;
+  color: var(--color-text-light);
 }
 
 /* ==========================================================================

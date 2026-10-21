@@ -1,0 +1,20 @@
+{
+  "name": "Işıl Işıl Mobilya",
+  "short_name": "Işıl Mobilya",
+  "description": "Küçükçekmece’de özel ölçü mobilya imalatı. Mutfak dolabı, gardırop, oturma, yatak ve yemek odası.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "lang": "tr",
+  "dir": "ltr",
+  "background_color": "#FAF6EF",
+  "theme_color": "#FAF6EF",
+  "icons": [
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

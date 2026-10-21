@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.isilisilmobilya.com/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isilisilmobilya.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isilisilmobilya.com/"/>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/logo.png</image:loc>
+      <image:title>Işıl Işıl Mobilya logosu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/og-image.jpg</image:loc>
+      <image:title>Işıl Işıl Mobilya oturma odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/hero.jpg</image:loc>
+      <image:title>Işıl Işıl Mobilya oturma odası koleksiyonu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/about.jpg</image:loc>
+      <image:title>Işıl Işıl Mobilya atölyesi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/lina-koltuk.jpg</image:loc>
+      <image:title>Lina Koltuk — oturma odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/nora-berjer.jpg</image:loc>
+      <image:title>Nora Berjer — oturma odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/mira-kose.jpg</image:loc>
+      <image:title>Mira Köşe — oturma odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/vera-karyola.jpg</image:loc>
+      <image:title>Vera Karyola — yatak odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/alma-yatak.jpg</image:loc>
+      <image:title>Alma Yatak — yatak odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/defne-sifonyer.jpg</image:loc>
+      <image:title>Defne Şifonyer — yatak odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/ada-yemek-masasi.jpg</image:loc>
+      <image:title>Ada Yemek Masası — yemek odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/sedir-sandalye.jpg</image:loc>
+      <image:title>Sedir Sandalye — yemek odası</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.isilisilmobilya.com/assets/images/gallery/beste-servis-unitesi.jpg</image:loc>
+      <image:title>Beste Servis Ünitesi — yemek odası</image:title>
+    </image:image>
+  </url>
+</urlset>
