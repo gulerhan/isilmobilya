@@ -169,7 +169,9 @@
       tumu: "Tümü",
       oturma: "Oturma Odası",
       yatak: "Yatak Odası",
-      yemek: "Yemek Odası",
+      mutfak: "Mutfak",
+      banyo: "Banyo",
+      balkon: "Balkon",
     };
 
     let current = 0;
