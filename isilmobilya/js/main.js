@@ -423,8 +423,65 @@
     schedule();
   };
 
+  const initWhatsApp = () => {
+    const root = document.querySelector("[data-wa]");
+    if (!root) return;
+
+    const toggle = root.querySelector("[data-wa-toggle]");
+    const panel = root.querySelector("[data-wa-panel]");
+    const closeBtn = root.querySelector("[data-wa-close]");
+    const form = root.querySelector("[data-wa-form]");
+    const field = root.querySelector("[data-wa-message]");
+    const phone = "905309013351";
+
+    const isOpen = () => !panel.hasAttribute("hidden");
+
+    const setOpen = (open) => {
+      panel.toggleAttribute("hidden", !open);
+      toggle.setAttribute("aria-expanded", String(open));
+      if (open) {
+        window.setTimeout(() => field.focus(), 30);
+      } else if (document.activeElement && root.contains(document.activeElement)) {
+        toggle.focus();
+      }
+    };
+
+    toggle.addEventListener("click", () => setOpen(!isOpen()));
+    closeBtn.addEventListener("click", () => setOpen(false));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && isOpen()) {
+        event.preventDefault();
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("pointerdown", (event) => {
+      if (isOpen() && !root.contains(event.target)) setOpen(false);
+    });
+
+    field.addEventListener("input", () => field.setCustomValidity(""));
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const message = field.value.trim();
+      if (!message) {
+        field.setCustomValidity("Lütfen bir mesaj yazın.");
+        field.reportValidity();
+        return;
+      }
+
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      panel.setAttribute("hidden", "");
+      toggle.setAttribute("aria-expanded", "false");
+      const opened = window.open(url, "_blank", "noopener,noreferrer");
+      if (!opened) window.location.assign(url);
+    });
+  };
+
   initNavigation();
   initReveal();
   initGallery();
   initReviews();
+  initWhatsApp();
 })();

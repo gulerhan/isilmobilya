@@ -165,6 +165,8 @@
       <symbol id="icon-pinterest" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.8 18.2c.3-1.2.8-2.8 1.1-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12.2" cy="10.6" r="2.1" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
       <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14 8.5h2.2V6H14c-1.8 0-3 1.2-3 3.1V11H9v2.4h2V20h2.6v-6.6h2.2l.4-2.4h-2.6V9.4c0-.5.3-.9.9-.9z" fill="currentColor"/></symbol>
       <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M12 4.8a7.2 7.2 0 0 0-6.2 10.8L5.2 19l3.5-.9A7.2 7.2 0 1 0 12 4.8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.3 10.3c.15 1.3 1.45 2.7 2.8 3.1.25.08.5 0 .7-.2l.55-.55c.18-.18.46-.2.66-.05.45.28.9.48 1.35.55.28.06.46.28.46.55v.7c0 .3-.28.55-.58.55-2.5-.15-5.4-2.35-5.7-5.55-.02-.28.2-.52.48-.52h.75c.26 0 .48.16.56.4.12.4.28.85.52 1.2.12.18.1.42-.08.58l-.48.42c-.16.14-.2.38-.1.58z" fill="currentColor"/></symbol>
+      <symbol id="icon-whatsapp-fill" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.47 1.34 4.98L2 22l5.17-1.35A9.93 9.93 0 0 0 12.04 22c5.5 0 9.96-4.46 9.96-9.96C22 6.46 17.54 2 12.04 2zm5.79 14.24c-.24.68-1.4 1.24-1.94 1.32-.5.07-1.13.1-1.82-.12-.43-.12-.97-.31-1.66-.61-2.91-1.26-4.8-4.2-4.95-4.4-.14-.19-1.18-1.56-1.18-2.98 0-1.41.74-2.11 1-2.4.25-.28.57-.35.76-.35h.54c.18 0 .4-.01.61.47.24.56.81 1.97.88 2.12.08.14.12.31.02.5-.1.18-.15.3-.29.47l-.43.48c-.14.14-.29.29-.12.56.16.28.72 1.2 1.56 1.94 1.07.96 1.98 1.26 2.26 1.4.27.14.43.11.6-.07.16-.19.7-.82.89-1.1.18-.28.37-.23.63-.14.25.1 1.64.77 1.92.91.28.14.46.2.53.32.07.12.07.68-.17 1.36z"/></symbol>
+      <symbol id="icon-send" viewBox="0 0 24 24"><path d="M5 12h12M13 6.5 18.5 12 13 17.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
       <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M14.5 6.5 9 12l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
       <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M9.5 6.5 15 12l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
       <symbol id="icon-close" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
@@ -499,6 +501,36 @@
         <p class="footer__copy">© 2026 Işıl Işıl Mobilya. Tüm hakları saklıdır.</p>
       </div>
     </footer>
+
+    <div class="wa" data-wa>
+      <section class="wa__panel" id="wa-panel" data-wa-panel hidden aria-labelledby="wa-title">
+        <header class="wa__head">
+          <img class="wa__avatar" src="assets/images/favicon.png" alt="" width="40" height="40">
+          <div class="wa__identity">
+            <p class="wa__name" id="wa-title">Işıl Işıl Mobilya</p>
+            <p class="wa__status">WhatsApp hattı · Küçükçekmece</p>
+          </div>
+          <button class="wa__close" type="button" data-wa-close aria-label="Sohbeti kapat">
+            <svg aria-hidden="true"><use href="#icon-close"></use></svg>
+          </button>
+        </header>
+        <div class="wa__body">
+          <p class="wa__bubble">Merhaba, hoş geldiniz. Ölçü, kumaş veya teslimat için yazın; Gönder deyince sizi WhatsApp’a yönlendirelim.</p>
+        </div>
+        <form class="wa__form" data-wa-form>
+          <label class="sr-only" for="wa-message">Mesajınız</label>
+          <textarea class="wa__input" id="wa-message" name="message" data-wa-message rows="2" maxlength="500" required placeholder="Mesajınızı yazın…"></textarea>
+          <button class="wa__send" type="submit">
+            <span>Gönder</span>
+            <svg aria-hidden="true"><use href="#icon-send"></use></svg>
+          </button>
+        </form>
+      </section>
+      <button class="wa__launch" type="button" data-wa-toggle aria-expanded="false" aria-controls="wa-panel">
+        <svg class="wa__launch-icon" aria-hidden="true"><use href="#icon-whatsapp-fill"></use></svg>
+        <span class="sr-only">WhatsApp ile yazın</span>
+      </button>
+    </div>
 
     <div class="lightbox" data-lightbox hidden>
       <div class="lightbox__backdrop" data-lightbox-close></div>
