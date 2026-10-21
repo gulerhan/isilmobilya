@@ -1083,24 +1083,6 @@ a:hover {
   max-width: 28rem;
 }
 
-.footer__nap {
-  max-width: 28rem;
-  margin: 0.85rem 0 0;
-  color: rgba(250, 246, 239, 0.78);
-  font-size: 0.9rem;
-  line-height: 1.55;
-}
-
-.footer__nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1.1rem;
-  margin: 1rem 0 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0.9rem;
-}
-
 .footer__copy {
   font-size: 0.875rem;
 }
