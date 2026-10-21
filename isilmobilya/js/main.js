@@ -474,8 +474,11 @@
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
       panel.setAttribute("hidden", "");
       toggle.setAttribute("aria-expanded", "false");
-      const opened = window.open(url, "_blank", "noopener,noreferrer");
-      if (!opened) window.location.assign(url);
+      const link = document.createElement("a");
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.click();
     });
   };
 
