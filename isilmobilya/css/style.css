@@ -367,17 +367,20 @@ a:hover {
 .logo__text {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   justify-content: center;
   min-width: 0;
   line-height: 1.05;
 }
 
 .logo__name {
+  display: block;
   font-family: var(--font-serif);
   font-size: clamp(0.92rem, 3.6vw, 1.15rem);
   font-weight: 600;
   letter-spacing: 0.03em;
   color: var(--color-accent-dark);
+  text-align: start;
   white-space: nowrap;
 }
 
@@ -393,17 +396,8 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-align: start;
   white-space: nowrap;
-}
-
-.logo__sub::before,
-.logo__sub::after {
-  content: "";
-  flex: 1 1 0;
-  min-width: 0.4rem;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.55;
 }
 
 .nav-toggle {
