@@ -341,10 +341,7 @@ a:hover {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  flex-shrink: 1;
-  min-width: 0;
-  max-width: min(calc(100% - 3.5rem), 20rem);
+  flex-shrink: 0;
   padding: 0;
   background: transparent;
   color: inherit;
@@ -357,47 +354,11 @@ a:hover {
 
 .logo__image {
   display: block;
-  flex-shrink: 0;
-  width: auto;
+  width: 3.15rem;
   height: 3.15rem;
-  object-fit: contain;
-  background: transparent;
-}
-
-.logo__text {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  min-width: 0;
-  line-height: 1.05;
-}
-
-.logo__name {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: clamp(0.92rem, 3.6vw, 1.15rem);
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: var(--color-accent-dark);
-  text-align: start;
-  white-space: nowrap;
-}
-
-.logo__sub {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  width: 100%;
-  margin-top: 0.18rem;
-  color: #6b7a4e;
-  font-family: var(--font-sans);
-  font-size: 0.58rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-align: start;
-  white-space: nowrap;
+  object-fit: cover;
+  background: #0a0a0a;
+  border-radius: 50%;
 }
 
 .nav-toggle {
@@ -1275,22 +1236,9 @@ a:hover {
     --carousel-gap: 1rem;
   }
 
-  .logo {
-    flex-shrink: 0;
-    max-width: 22rem;
-  }
-
   .logo__image {
+    width: 3.5rem;
     height: 3.5rem;
-  }
-
-  .logo__name {
-    font-size: 1.2rem;
-  }
-
-  .logo__sub {
-    font-size: 0.62rem;
-    letter-spacing: 0.22em;
   }
 
   .container {
