@@ -756,6 +756,10 @@ a:hover {
   text-align: left;
 }
 
+.gallery__caption:has(.gallery__name:empty):has(.gallery__category:empty) {
+  display: none;
+}
+
 .gallery__name {
   font-family: var(--font-serif);
   font-size: 1.3rem;
