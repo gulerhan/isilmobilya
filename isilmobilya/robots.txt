@@ -1,6 +1,32 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+Clean-param: logo&v&utm_source&utm_medium&utm_campaign&utm_content&utm_term
+Host: https://www.isilisilmobilya.com
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Disallow: /404.html
 
 Sitemap: https://www.isilisilmobilya.com/sitemap.xml

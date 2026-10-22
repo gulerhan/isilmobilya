@@ -2,6 +2,8 @@
 Options -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
+AddDefaultCharset UTF-8
+DefaultLanguage tr
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -9,6 +11,7 @@ ErrorDocument 404 /404.html
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteRule ^index\.html$ / [R=301,L]
 </IfModule>
 
 <IfModule mod_headers.c>
@@ -16,6 +19,8 @@ ErrorDocument 404 /404.html
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Content-Language "tr"
+  Header append Vary Accept-Encoding
 </IfModule>
 
 <IfModule mod_deflate.c>
@@ -33,4 +38,9 @@ ErrorDocument 404 /404.html
   ExpiresByType image/svg+xml "access plus 1 month"
   ExpiresByType image/webp "access plus 1 month"
   ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType application/manifest+json .webmanifest
 </IfModule>
