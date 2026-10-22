@@ -605,6 +605,10 @@ a:hover {
   border-radius: var(--radius);
 }
 
+.about__title {
+  margin-bottom: 1.35rem;
+}
+
 .about__content p {
   margin-bottom: 1rem;
 }
@@ -1283,20 +1287,15 @@ a:hover {
     margin-bottom: 0.9rem;
   }
 
-  .about__title {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
   .about__media {
     grid-column: 1;
-    grid-row: 2 / 4;
+    grid-row: 2;
     margin-bottom: 1.25rem;
   }
 
   .about__content {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 2;
   }
 
   .about__content .values {
@@ -1305,7 +1304,7 @@ a:hover {
 
   .about__layout > .features {
     grid-column: 1 / -1;
-    grid-row: 4;
+    grid-row: 3;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: 1.75rem;
   }
