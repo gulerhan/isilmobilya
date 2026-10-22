@@ -574,7 +574,7 @@ a:hover {
 .about__layout {
   display: grid;
   gap: 2rem;
-  align-items: center;
+  align-items: start;
 }
 
 .about__media {
@@ -1272,7 +1272,42 @@ a:hover {
 @media (min-width: 1024px) {
   .about__layout {
     grid-template-columns: 0.9fr 1.1fr;
-    gap: 4rem;
+    column-gap: 4rem;
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .about__layout > .eyebrow {
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0.9rem;
+  }
+
+  .about__title {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .about__media {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    margin-bottom: 1.25rem;
+  }
+
+  .about__content {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .about__content .values {
+    margin-bottom: 0;
+  }
+
+  .about__layout > .features {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 1.75rem;
   }
 
   .gallery__grid {
