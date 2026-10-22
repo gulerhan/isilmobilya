@@ -385,6 +385,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.35rem;
+  width: 100%;
   margin-top: 0.18rem;
   color: #6b7a4e;
   font-family: var(--font-sans);
@@ -398,7 +399,8 @@ a:hover {
 .logo__sub::before,
 .logo__sub::after {
   content: "";
-  width: 0.7rem;
+  flex: 1 1 0;
+  min-width: 0.4rem;
   height: 1px;
   background: currentColor;
   opacity: 0.55;
