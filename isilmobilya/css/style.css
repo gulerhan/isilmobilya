@@ -59,9 +59,17 @@ body.has-overlay {
 }
 
 img,
-svg,
 iframe {
   max-width: 100%;
+}
+
+svg {
+  max-width: 100%;
+}
+
+.icon-btn svg,
+.feature__icon svg {
+  max-width: none;
 }
 
 img {
@@ -163,7 +171,8 @@ a:hover {
   position: absolute;
   width: 0;
   height: 0;
-  overflow: hidden;
+  overflow: visible;
+  pointer-events: none;
 }
 
 .container {
@@ -275,9 +284,11 @@ a:hover {
 .icon-btn {
   display: inline-grid;
   place-items: center;
+  flex-shrink: 0;
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;
+  overflow: hidden;
   border: 1px solid rgba(59, 49, 40, 0.14);
   border-radius: 50%;
   background: var(--color-bg);
@@ -286,6 +297,7 @@ a:hover {
 }
 
 .icon-btn svg {
+  display: block;
   width: 1.15rem;
   height: 1.15rem;
 }
@@ -929,8 +941,20 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.35rem;
+  flex-wrap: nowrap;
+  gap: 0.2rem;
+  max-width: 100%;
   margin-top: 1.5rem;
+}
+
+.reviews__controls .icon-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.reviews__controls .icon-btn svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .reviews.is-single .reviews__controls {
@@ -940,12 +964,15 @@ a:hover {
 .reviews__dots {
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-width: 0;
 }
 
 .reviews__dot {
   position: relative;
-  width: 2.25rem;
-  height: 2.75rem;
+  flex: 0 0 auto;
+  width: 0.95rem;
+  height: 2.25rem;
   padding: 0;
   border: 0;
   background: transparent;
@@ -956,8 +983,8 @@ a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.4rem;
+  height: 0.4rem;
   border-radius: 999px;
   background: rgba(59, 49, 40, 0.28);
   transform: translate(-50%, -50%);
@@ -965,13 +992,22 @@ a:hover {
 }
 
 .reviews__dot.is-active::before {
-  width: 1.3rem;
+  width: 0.95rem;
   background: var(--color-accent-deep);
+}
+
+.reviews__autoplay {
+  position: relative;
+  margin-left: 0.1rem;
+}
+
+.reviews__icon {
+  grid-area: 1 / 1;
 }
 
 .reviews__autoplay[aria-pressed="false"] .reviews__icon--pause,
 .reviews__autoplay[aria-pressed="true"] .reviews__icon--play {
-  display: none;
+  visibility: hidden;
 }
 
 .js .reviews__viewport {
@@ -1198,7 +1234,7 @@ a:hover {
 @media (min-width: 768px) {
   :root {
     --space-section: 6.5rem;
-    --carousel-gap: 1.25rem;
+    --carousel-gap: 1rem;
   }
 
   .logo {
@@ -1249,6 +1285,38 @@ a:hover {
 
   .js .reviews__slide {
     flex-basis: calc((100% - var(--carousel-gap)) / 2);
+  }
+
+  .reviews__controls {
+    gap: 0.45rem;
+  }
+
+  .reviews__controls .icon-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .reviews__controls .icon-btn svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .reviews__dot {
+    width: 2.25rem;
+    height: 2.75rem;
+  }
+
+  .reviews__dot::before {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .reviews__dot.is-active::before {
+    width: 1.3rem;
+  }
+
+  .reviews__autoplay {
+    margin-left: 0.25rem;
   }
 
   .footer__inner {
